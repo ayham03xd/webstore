@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gadget Display PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <h1>Gadget Store</h1>
+  <p class="instructions">Click on the image to view more information and add it to your list.</p>
+
+  <div class="item">
+    <figure>
+      <img src="https://resource.logitech.com/content/dam/gaming/en/products/pro-wireless-gaming-mouse/pro-wireless-carbon-gallery-1.png" onclick="toggleDescription('desc1')"/>
+      <figcaption>Logitech G Pro Wireless Mouse</figcaption>
+    </figure>
+    <div id="desc1" class="description">
+      <p>
+        The Logitech G Pro Wireless Mouse is engineered for elite esports performance. It offers LIGHTSPEED wireless technology, an ultra-lightweight body,
+        HERO 25K sensor for precision tracking, and a customizable button layout. Ideal for competitive gamers who need speed, accuracy, and reliability.
+      </p>
+      <button onclick="addToList('Logitech G Pro Wireless Mouse')">Add to List</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <figure>
+      <img src="https://image.citycenter.jo/cachewebp/catalog/32021/OR60-1200x1200.webp" onclick="toggleDescription('desc2')"/>
+      <figcaption>HyperX Alloy Origins 60% Keyboard</figcaption>
+    </figure>
+    <div id="desc2" class="description">
+      <p>
+        The HyperX Alloy Origins 60 is a compact, portable mechanical keyboard built for gamers on the go. It features HyperX Red linear switches,
+        RGB backlighting with dynamic effects, full aluminum body for durability, and onboard memory for custom profiles. Perfect for minimal setups.
+      </p>
+      <button onclick="addToList('HyperX Alloy Origins 60% Keyboard')">Add to List</button>
+    </div>
+  </div>
+
+  <div class="item">
+    <figure>
+      <img src="https://hyperx.com/cdn/shop/files/hyperx_cloud_ii_red_1_main_1080x.jpg?v=1736382551" onclick="toggleDescription('desc3')"/>
+      <figcaption>HyperX Cloud II Gaming Headset</figcaption>
+    </figure>
+    <div id="desc3" class="description">
+      <p>
+        The HyperX Cloud II delivers immersive audio with 53mm drivers, virtual 7.1 surround sound, and passive noise cancellation.
+        It is known for premium comfort thanks to memory foam ear cushions and an adjustable headband. Designed for pro-level sound during long gaming marathons.
+      </p>
+      <button onclick="addToList('HyperX Cloud II Gaming Headset')">Add to List</button>
+    </div>
+  </div>
+
+  <div class="user-list">
+    <h2>Your List:</h2>
+    <ul id="userList"></ul>
+  </div>
+</body>
+</html>
